@@ -1,12 +1,10 @@
 #BlueJ class context
 comment0.target=Hand
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ BlackJack\ here.\r\n\r\n\ @author\ Auckland\ V.\r\n\ @version\ 9/17/19\r\n
-comment1.params=value\ suit\ card1\ card2
-comment1.target=Hand(int,\ java.lang.String,\ int,\ int)
+comment1.params=value\ suit\ hand
+comment1.target=Hand(int,\ java.lang.String,\ boolean)
 comment2.params=
 comment2.target=int\ getValue()
-comment3.params=value
-comment3.target=void\ hit(int)
-comment4.params=value
-comment4.target=void\ deal(int)
-numComments=5
+comment3.params=
+comment3.target=void\ hit()
+numComments=4

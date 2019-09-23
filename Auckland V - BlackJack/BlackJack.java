@@ -6,18 +6,21 @@
  * @version 9/17/19
  */
 import java.util.Scanner;
-import java.lang.Math;
 public class BlackJack{
     public static void main(){
         boolean game = true;
-        //Scanner hit
         
-        //Hand myHand = new Hand(0, "", 0);
-        //Hand dealerHand = new Hand(0, "", 0);
+        Hand myHand = new Hand(0, "", true);
+        Hand dealerHand = new Hand(0, "", false);
         
-        while (game){
-            //double yourCard1
+        myHand.hit();
+        dealerHand.hit();
+        myHand.hit();
+        dealerHand.hit();
+        
+        
+        while (game){    
+            break;
         }
     }
-    
 } 
