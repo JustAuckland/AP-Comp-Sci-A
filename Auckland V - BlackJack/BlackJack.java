@@ -8,19 +8,28 @@
 import java.util.Scanner;
 public class BlackJack{
     public static void main(){
-        boolean game = true;
         
-        Hand myHand = new Hand(0, "", true);
-        Hand dealerHand = new Hand(0, "", false);
+        Hand myHand = new Hand();
+        Hand dealerHand = new Hand();
         
-        myHand.hit();
-        dealerHand.hit();
-        myHand.hit();
-        dealerHand.hit();
-        
-        
-        while (game){    
-            break;
+        System.out.println("Do you want to hit?");
+        //hit = scanner.nextln();
+        while (myHand.getValue() < 21){
+            System.out.println(myHand.getValue());
+            System.out.println("You got a " + myHand.hit());
+            System.out.println("Your total is " + myHand.getValue());
+            if (myHand.getValue() > 21){
+                System.out.println("Oh no! You busted");
+            }
         }
+        
+        if (myHand.getValue() <= 21){
+            while (dealerHand.getValue() < 17){
+                System.out.println(dealerHand.getValue());
+                System.out.println("The dealer drew a " + dealerHand.hit());
+                System.out.println("The dealer's total is " + dealerHand.getValue());
+            }
+        }
+        
     }
 } 
