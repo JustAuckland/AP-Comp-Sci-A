@@ -80,8 +80,7 @@ public class Magpie3{
           // Find the string of length 1 before and after
           // the word
           String before = " ", after = " ";
-          if (psn > 0)
-          {
+          if (psn > 0){
               before = phrase.substring(psn - 1, psn);
           }
           if (psn + goal.length() < phrase.length()){
@@ -103,9 +102,8 @@ public class Magpie3{
           psn = phrase.indexOf(goal, psn + 1);
    
       }
-    
       return -1;
-    }
+   }
    /**
     * Search for one word in phrase. The search is not case
     * sensitive. This method will check that the given goal
