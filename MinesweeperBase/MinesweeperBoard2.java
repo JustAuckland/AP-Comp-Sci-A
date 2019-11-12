@@ -16,7 +16,9 @@ public class MinesweeperBoard2{
     int columns;
     public MinesweeperBoard2(){
         //Put the constructor here.
-        
+        this.rows = rows;
+        this.columns = columns;
+        this.board = new Cell[columns * rows];
         
         //These pieces are for the GUI.
         JFrame frame = new JFrame();
@@ -48,5 +50,4 @@ public class MinesweeperBoard2{
         }
         return panel;
     }
-
 }
