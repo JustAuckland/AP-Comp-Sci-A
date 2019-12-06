@@ -13,6 +13,12 @@ import java.awt.event.ActionListener;
 public class Cell implements ActionListener{
     //Variables you need to work with
     private int value;
+    public int getValue(){
+        return getValue();
+    }
+    public void changeValue(int newValue){
+        value = newValue;
+    }
     
     //Variables you don't need to worry about or care about.
     private JButton button;

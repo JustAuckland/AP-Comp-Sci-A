@@ -30,21 +30,41 @@ public class MinesweeperBoard2{
     }
 
     public void addBombs(int bombs){
-        
+        for(int i = 0; i < bombs; i++){
+            double randomloc = Math.random() * board.length;
+            int randomlocation = (int) randomloc;
+            while(board[randomlocation].isBomb()){
+                randomloc = Math.random() * board.length;
+                randomlocation = (int) randomloc;
+            }
+            board[randomlocation].changeValue(-1);
+        }
     }
 
-    public void addNums(){
-        
+    /**public void addNums(){
+        for (int i = 0; i < rows * columns; i++){
+            if (!board[i].isBomb()){
+                if (i + 1) > 0 && board[i].isBomb{
+                    board[i].changeValue(board[i].hryValue() + 1)
+                }
+                
+                
+            }
+        }
     }
     /**This method is used for testing and will be deleted if using the GUI.
      *  It is still required for all students.
      */
     public void printBoard(){      
-        for(int i = 0; i<rows; i++){
-            for(int j = 0; j<columns; j++){
-                
+        for(int i = 0; i < board.length; i++){
+            if (i % columns == 0){
+                System.out.println();
             }
-            
+            if (board[i].getValue() >= 0){
+                System.out.print(board[i].getValue() + " ");
+            }else{
+                System.out.print("X ");
+            }
         }
     }
     public JPanel addCells(){
