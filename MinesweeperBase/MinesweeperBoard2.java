@@ -41,14 +41,21 @@ public class MinesweeperBoard2{
         }
     }
 
-    /**public void addNums(){
+    public void addNums(){
         for (int i = 0; i < rows * columns; i++){
             if (!board[i].isBomb()){
-                if (i + 1) > 0 && board[i].isBomb{
-                    board[i].changeValue(board[i].hryValue() + 1)
+                if (i + 1 > 0 && board[i].isBomb()){
+                    board[i].changeValue(board[i].getValue() + 1);
                 }
-                
-                
+                if (i - 1 > 0 && board[i].isBomb()){
+                    board[i].changeValue(board[i].getValue() + 1);
+                }
+                if (i + columns > 0 && board[i].isBomb()){
+                    board[i].changeValue(board[i].getValue() + 1);
+                }
+                if (i + columns > 0 && board[i].isBomb()){
+                    board[i].changeValue(board[i].getValue() + 1);
+                }
             }
         }
     }

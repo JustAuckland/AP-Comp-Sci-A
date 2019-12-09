@@ -5,8 +5,10 @@ comment1.target=MinesweeperBoard2(int,\ int)
 comment2.params=bombs
 comment2.target=void\ addBombs(int)
 comment3.params=
-comment3.target=void\ printBoard()
-comment3.text=public\ void\ addNums(){\r\n\ \ \ \ \ \ \ \ for\ (int\ i\ \=\ 0;\ i\ <\ rows\ *\ columns;\ i++){\r\n\ \ \ \ \ \ \ \ \ \ \ \ if\ (\!board[i].isBomb()){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\ (i\ +\ 1)\ >\ 0\ &&\ board[i].isBomb{\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ board[i].changeValue(board[i].hryValue()\ +\ 1)\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ }\r\n\ \ \ \ /**This\ method\ is\ used\ for\ testing\ and\ will\ be\ deleted\ if\ using\ the\ GUI.\r\n\ \ It\ is\ still\ required\ for\ all\ students.\r\n
+comment3.target=void\ addNums()
 comment4.params=
-comment4.target=javax.swing.JPanel\ addCells()
-numComments=5
+comment4.target=void\ printBoard()
+comment4.text=This\ method\ is\ used\ for\ testing\ and\ will\ be\ deleted\ if\ using\ the\ GUI.\r\n\ \ It\ is\ still\ required\ for\ all\ students.\r\n
+comment5.params=
+comment5.target=javax.swing.JPanel\ addCells()
+numComments=6
