@@ -14,7 +14,7 @@ public class Cell implements ActionListener{
     //Variables you need to work with
     private int value;
     public int getValue(){
-        return value;
+        return getValue();
     }
     public void changeValue(int newValue){
         value = newValue;
