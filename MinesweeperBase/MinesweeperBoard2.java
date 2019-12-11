@@ -28,7 +28,6 @@ public class MinesweeperBoard2{
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
-
     public void addBombs(int bombs){
         for(int i = 0; i < bombs; i++){
             double randomloc = Math.random() * board.length;
@@ -40,20 +39,39 @@ public class MinesweeperBoard2{
             board[randomlocation].changeValue(-1);
         }
     }
-
     public void addNums(){
         for (int i = 0; i < rows * columns; i++){
             if (!board[i].isBomb()){
-                if (i + 1 > 0 && board[i].isBomb()){
+                //right
+                if ((i + 1) < board.length && board[i + 1].isBomb()){
                     board[i].changeValue(board[i].getValue() + 1);
                 }
-                if (i - 1 > 0 && board[i].isBomb()){
+                //left
+                if (i - 1 >= 0 && board[i - 1].isBomb()){
                     board[i].changeValue(board[i].getValue() + 1);
                 }
-                if (i + columns > 0 && board[i].isBomb()){
+                //down
+                if (i + columns < board.length && board[i + columns].isBomb()){
                     board[i].changeValue(board[i].getValue() + 1);
                 }
-                if (i + columns > 0 && board[i].isBomb()){
+                //up
+                if (i - columns >= 0 && board[i - columns].isBomb()){
+                    board[i].changeValue(board[i].getValue() + 1);
+                }
+                //top right
+                if(i - columns + 1 >= 0 && board[i - columns + 1].isBomb()){
+                    board[i].changeValue(board[i].getValue() + 1);
+                }
+                //bottom left
+                if(i + columns - 1 < board.length && board[i + columns - 1].isBomb()){
+                    board[i].changeValue(board[i].getValue() + 1);
+                }
+                //bottom right
+                if(i - columns - 1 >= 0 && board[i - columns - 1].isBomb()){
+                    board[i].changeValue(board[i].getValue() + 1);
+                }
+                //top left
+                if(i + columns + 1 < board.length && board[i + columns + 1].isBomb()){
                     board[i].changeValue(board[i].getValue() + 1);
                 }
             }
@@ -83,4 +101,3 @@ public class MinesweeperBoard2{
         return panel;
     }
 }
-
