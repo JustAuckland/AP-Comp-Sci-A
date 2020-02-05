@@ -1,4 +1,4 @@
-package classes;
+ 
 
 public class IntArrayWorker
 {
@@ -12,6 +12,18 @@ public class IntArrayWorker
   {
     matrix = theMatrix;
   }
+  public int getCount(int target){
+    int count = 0;
+    for(int row = 0; row < matrix.length; row++){
+        for(int col = 0; col < matrix[0].length; col++){
+            if(target == matrix[row][col]){
+                count ++;
+            }
+        }
+    }
+    return count;
+  }
+  
   
   /**
    * Method to return the total 
