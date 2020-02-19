@@ -11,14 +11,14 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class MinesweeperBoard2{
-    Cell[] board;
+    Cell[][] board;
     int rows;
     int columns;
     public MinesweeperBoard2(int row, int col){
         //Put the constructor here.
         this.rows = row;
         this.columns = col;
-        this.board = new Cell[columns * rows];
+        this.board = new Cell[rows][columns];
         
         //These pieces are for the GUI.
         JFrame frame = new JFrame();
