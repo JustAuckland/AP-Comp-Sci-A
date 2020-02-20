@@ -30,49 +30,55 @@ public class MinesweeperBoard2{
     }
     public void addBombs(int bombs){
         for(int i = 0; i < bombs; i++){
-            double randomloc = Math.random() * board.length;
-            int randomlocation = (int) randomloc;
-            while(board[randomlocation].isBomb()){
-                randomloc = Math.random() * board.length;
-                randomlocation = (int) randomloc;
+            double randomlocation = Math.random() * (rows);
+            int randomRow = (int) randomlocation;
+            double randomlocation2 = Math.random() * (columns);
+            int randomCol = (int) randomlocation2;
+            while(board[randomRow][randomCol].isBomb()){
+                randomlocation = Math.random() * (rows);
+                randomRow = (int) randomlocation;
+                randomlocation2 = Math.random() * (columns);
+                randomCol = (int) randomlocation2;
             }
-            board[randomlocation].changeValue(-1);
+            board[randomRow][randomCol].changeValue(-1);
         }
     }
     public void addNums(){
-        for (int i = 0; i < rows * columns; i++){
-            if (!board[i].isBomb()){
-                //right *
-                if ((i + 1) < board.length && board[i + 1].isBomb()){
-                    board[i].changeValue(board[i].getValue() + 1);
-                }
-                //left * 
-                if (i - 1 >= 0 && board[i - 1].isBomb()){
-                    board[i].changeValue(board[i].getValue() + 1);
-                }
-                //down
-                if (i + columns < board.length && board[i + columns].isBomb()){
-                    board[i].changeValue(board[i].getValue() + 1);
-                }
-                //up
-                if (i - columns >= 0 && board[i - columns].isBomb()){
-                    board[i].changeValue(board[i].getValue() + 1);
-                }
-                //top right * 
-                if(i - columns + 1 >= 0 && board[i - columns + 1].isBomb()){
-                    board[i].changeValue(board[i].getValue() + 1);
-                }
-                //bottom left * 
-                if(i + columns - 1 < board.length && board[i + columns - 1].isBomb()){
-                    board[i].changeValue(board[i].getValue() + 1);
-                }
-                //bottom right *
-                if(i - columns - 1 >= 0 && board[i - columns - 1].isBomb()){
-                    board[i].changeValue(board[i].getValue() + 1);
-                }
-                //top left *
-                if(i + columns + 1 < board.length && board[i + columns + 1].isBomb()){
-                    board[i].changeValue(board[i].getValue() + 1);
+        for (int i = 0; i < rows; i++){
+            for(int r = 0; r < columns; r++){
+                if (!board[i].isBomb()){
+                    //right *
+                    if ((i + 1) < board.length && board[i + 1].isBomb()){
+                        board[i].changeValue(board[i].getValue() + 1);
+                    }
+                    //left * 
+                    if (i - 1 >= 0 && board[i - 1].isBomb()){
+                        board[i].changeValue(board[i].getValue() + 1);
+                    }
+                    //down
+                    if (i + columns < board.length && board[i + columns].isBomb()){
+                        board[i].changeValue(board[i].getValue() + 1);
+                    }
+                    //up
+                    if (i - columns >= 0 && board[i - columns].isBomb()){
+                        board[i].changeValue(board[i].getValue() + 1);
+                    }
+                    //top right * 
+                    if(i - columns + 1 >= 0 && board[i - columns + 1].isBomb()){
+                        board[i].changeValue(board[i].getValue() + 1);
+                    }
+                    //bottom left * 
+                    if(i + columns - 1 < board.length && board[i + columns - 1].isBomb()){
+                        board[i].changeValue(board[i].getValue() + 1);
+                    }
+                    //bottom right *
+                    if(i - columns - 1 >= 0 && board[i - columns - 1].isBomb()){
+                        board[i].changeValue(board[i].getValue() + 1);
+                    }
+                    //top left *
+                    if(i + columns + 1 < board.length && board[i + columns + 1].isBomb()){
+                        board[i].changeValue(board[i].getValue() + 1);
+                    }
                 }
             }
         }
